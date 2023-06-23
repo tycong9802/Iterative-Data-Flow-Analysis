@@ -3,7 +3,7 @@
 	
 Typically a compiler is made up of a front end that converts source programs to a intermediate representation, a middle end that carries out phases of optimizations and a back end that generates target object codes. 
 
-In this project, you are expected to implement the middle part (value numbering) of a toy compiler that accepts a subset of C.
+In this project, you are expected to implement the middle part (Data Flow Analysis) of a toy compiler that accepts a subset of C.
 
 The accepted language is a subset of C. The test programs that will be used to evaluate the following properties:
 
@@ -41,13 +41,9 @@ Now compile the output .out.c file into an executable object file then run it on
 
 # In Detail
 
-## Value Numbering
-Value numbering is a classic technique that eliminates redundancies in the linear IR. 
-In this phase, you need to implement value numbering in your compiler. 
-Essentially, you should take care of your hash table. 
-As you know, value numbering can be carried out on different level of scopes: BB, EBB, or even bigger regions. 
-In this assignment, you are only required to implement the algorithm within a basic block. You are certainly welcome to try larger scopes if you'd like. 
-Your modified compiler should generate the C code rewritten upon the value numbering (i.e., with redundant expressions removed).
+## Data Flow Analysis
 
+The optimizations in this phase involve data flow analysis.
 
+The method is AVAIL.
 
